@@ -1,6 +1,6 @@
 import './link-item.css';
-import { FiCopy, FiX } from 'react-icons/fi';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { FiCopy, FiX } from 'react-icons/fi';
 
 export default function LinkItem({ closeModal, content }) {
     return (
@@ -24,8 +24,8 @@ export default function LinkItem({ closeModal, content }) {
             <CopyToClipboard text={content.link}>
                 <button
                     className="modal-link"
-                    onClick={() => alert('Url copiada com sucesso!')
-                }>
+                    onClick={() => alert('Url copiada com sucesso!')}
+                >
                     {content.link}
                     <FiCopy size={20} color='#fff' />
                 </button>
