@@ -1,0 +1,112 @@
+@keyframes show {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideToTop {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.hiden {
+    opacity: 0;
+}
+
+.container-home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-logo {
+    text-align: center;
+    color: #fff;
+}
+
+.container-logo .logo-image, .menu {
+    animation: show 1.5s 0.5s forwards;
+}
+
+.logo-texts {
+    animation: show 1.5s 0.8s forwards;
+}
+
+.logo-texts h1 {
+    font-size: 60px;
+}
+
+.container-span {
+    margin: 10px 0 34px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.container-main {
+    width: 90%;
+    max-width: 540px;
+    animation: slideToTop 0.7s 1s forwards;
+}
+
+.main-input {
+    width: 100%;
+    height: 46px;
+    background: rgb(255,255,255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.main-input > svg {
+    margin: 0 8px;
+}
+
+.main-input > input {
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+.main-input > input::placeholder {
+    color: rgb(255,255,255, 0.8);
+}
+
+.container-main button, .main-input > input {
+    width: 100%;
+    height: 46px;
+    outline: none;
+    border: none;
+}
+
+.container-main button {
+    border-radius: 4px;
+    font-size: 16px;
+    color: #000;
+    margin-top: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.container-main button:hover {
+    transform: scale(1.03)
+}
+
+@media (max-width: 400px) {
+    .container-logo img {
+        width: 120px;
+    }
+
+    .container-logo h1 {
+        font-size: 45px;
+    }
+
+    .container-logo span {
+        font-size: 12px;
+    }
+}
