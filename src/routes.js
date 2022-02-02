@@ -5,14 +5,14 @@ import Links from './pages/Links';
 import Error from './pages/Error';
 
 export default function RoutesApp() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/links" element={<Links />} />
-                <Route path="*" element={<Error />} />
-            </Routes>
-        </BrowserRouter>
-    )
+   return (
+      <BrowserRouter>
+         <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/links" element={<Links />} />
+            <Route path="*" element={<Error />} />
+         </Routes>
+      </BrowserRouter>
+   )
 }
-    
+

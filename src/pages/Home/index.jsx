@@ -8,17 +8,17 @@ import LinkItem from '../../components/LinkItem';
 import api from '../../services/api';
 
 export default function Home() {
-   const [link, setLink] = useState('');
-   const [data, setData] = useState({});
+   const [inputValue, setinputValue] = useState('');
+   const [requestData, setRequestData] = useState({});
    const [showModal, setShowModal] = useState(false);
 
    const hanleShortLink = async () => {
       try {
          const response = await api.post('/shorten', {
-            long_url: link
+            long_url: inputValue
          })
 
-         setData(response.data);
+         setRequestData(response.data);
          setShowModal(true);
          setLink('');
 
@@ -51,8 +51,8 @@ export default function Home() {
                <input
                   type="text"
                   placeholder="Cole seu link aqui..."
-                  value={link}
-                  onChange={e => setLink(e.target.value)}
+                  value={inputValue}
+                  onChange={e => setinputValue(e.target.value)}
                />
             </div>
             <div>
@@ -67,7 +67,7 @@ export default function Home() {
          {showModal && (
             <LinkItem
                closeModal={() => setShowModal(false)}
-               content={data}
+               content={requestData}
             />
          )}
 
