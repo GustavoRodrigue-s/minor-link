@@ -1,0 +1,56 @@
+@keyframes slideY {
+    from { transform: translateY(170px); }
+    to { transform: translateY(0); }
+}
+
+.container-modal {
+    position: fixed;
+    bottom: 18px;
+    background: #fff;
+    padding: 14px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation: slideY 0.4s;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.modal-header button {
+    border: none;
+    background: transparent;
+}
+
+.container-modal span {
+    margin: 14px 0;
+    color: #A7A7A7;
+}
+
+.modal-link {
+    background: #172742;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+    height: 38px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .container-modal {
+        bottom: 0;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+}
