@@ -1,4 +1,4 @@
-import './link-item.css';
+import './modal.css';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FiCopy, FiX } from 'react-icons/fi';
 

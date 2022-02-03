@@ -3,9 +3,10 @@ import { useState } from 'react';
 import './home.css';
 
 import Menu from '../../components/Menu';
-import LinkItem from '../../components/LinkItem';
+import Modal from '../../components/Modal';
 
 import api from '../../services/api';
+import { saveLinks } from '../../services/storageLinks';
 
 export default function Home() {
    const [inputValue, setinputValue] = useState('');
@@ -20,10 +21,13 @@ export default function Home() {
 
          setRequestData(response.data);
          setShowModal(true);
-         setLink('');
+
+         saveLinks('shortenedLinks', response.data);
+
+         setinputValue('');
 
       } catch (e) {
-         setLink('');
+         setinputValue('');
       }
    }
 
@@ -31,10 +35,10 @@ export default function Home() {
       <div className="container-home">
 
          <div className="container-logo">
-            <div className="logo-image hiden">
+            <div className="logo-image hidden">
                <img src="./logo.png" alt="Logo encurta link" />
             </div>
-            <div className="logo-texts hiden">
+            <div className="logo-texts hidden">
                <div>
                   <h1>MinorLink</h1>
                </div>
@@ -45,7 +49,7 @@ export default function Home() {
             </div>
          </div>
 
-         <div className="container-main hiden">
+         <div className="container-main hidden">
             <div className="main-input">
                <FiLink size={24} color="#fff" />
                <input
@@ -65,7 +69,7 @@ export default function Home() {
          <Menu />
 
          {showModal && (
-            <LinkItem
+            <Modal
                closeModal={() => setShowModal(false)}
                content={requestData}
             />

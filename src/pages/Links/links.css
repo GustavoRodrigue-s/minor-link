@@ -1,13 +1,24 @@
 .container-links {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   max-width: 750px;
+   margin-top: 32px;
+}
+
+.container-list {
    width: 90%;
-   max-width: 700px;
-   margin: 32px auto 0 auto;
+   opacity: 0;
+   animation: slideToTop 0.7s 0.6s forwards;
 }
 
 .links-header {
+   width: 90%;
    display: flex;
    gap: 14px;
    color: #fff;
+   animation: show 1.5s 0.3s forwards;
 }
 
 .link-item {
@@ -42,6 +53,14 @@
    border: none;
    padding: 3px;
    background-color: transparent;
+}
+
+.container-empty-list > h2 {
+   width: 100%;
+   text-align: center;
+   margin-top: 30px;
+   color: #fff;
+   font-weight: 400;
 }
 
 @media (max-width: 500px) {
