@@ -68,7 +68,7 @@ export default function Links() {
                      <li className="link-item" key={link.id}>
                         <button className="link" onClick={() => handleLinkOpen(link)}>
                            <FiLink size={18} color="#fff" />
-                           {link.long_url}
+                           <span>{link.long_url}</span>
                         </button>
                         <button className="link-delete" onClick={() => handleDelete(link.id)}>
                            <FiTrash size={24} color="#ff5454" />

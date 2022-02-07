@@ -15,12 +15,15 @@
 }
 
 .container-error > img {
+   width: 80%;
    max-width: 300px;
    margin: 24px 0;
    animation: shake 1s;
 }
 
 .container-error h1 {
+   font-size: min(32px, 7vw);
+   white-space: nowrap;
    color: #fff;
 }
 

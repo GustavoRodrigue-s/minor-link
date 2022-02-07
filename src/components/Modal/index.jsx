@@ -17,7 +17,7 @@ export default function LinkItem({ closeModal, content }) {
             </div>
          </div>
 
-         <span>
+         <span className="long-url">
             {content.long_url}
          </span>
 
